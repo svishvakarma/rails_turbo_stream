@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-	def index
+		def index
 			@players = Player.all
 		end
 	
@@ -40,5 +40,4 @@ class PlayersController < ApplicationController
 		def player_params
 			params.require(:player).permit(:name, :stats)
 		end
-	end
 end
