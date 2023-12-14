@@ -1,0 +1,11 @@
+<%= turbo_frame_tag 'player_form' do %>
+    <%= form_with(model: player, local: true) do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+  
+      <%= form.label :stats %>
+      <%= form.text_area :stats %>
+  
+      <%= form.submit %>
+    <% end %>
+<% end %>

@@ -1,0 +1,11 @@
+<%= turbo_frame_tag 'player_list' do %>
+    <h1>Players</h1>
+    <ul>
+      <% @players.each do |player| %>
+        <li>
+          <%= link_to player.name, edit_player_path(player) %>
+          (<%= link_to 'Delete', player_path(player), method: :delete, data: { confirm: 'Are you sure?' } %>)
+        </li>
+      <% end %>
+    </ul>
+<% end %>
